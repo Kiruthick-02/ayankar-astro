@@ -1,0 +1,6 @@
+export { default as Button } from './Button'
+export { default as Card, ServiceCard, TestimonialCard, StatCard } from './Card'
+export { default as Loader, PageLoader, Skeleton } from './Loader'
+export { default as Modal, ConfirmModal, SuccessModal } from './Modal'
+export { default as SectionHeading } from './SectionHeading'
+export { default as StarBackground } from './StarBackground'
