@@ -125,27 +125,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div 
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-        >
-          {[
-            { value: '15+', label: 'Years Experience' },
-            { value: '10K+', label: 'Happy Clients' },
-            { value: '50+', label: 'Expert Astrologers' },
-            { value: '99%', label: 'Accuracy Rate' },
-          ].map((stat, idx) => (
-            <div key={idx} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-amber-400 font-cinzel mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-white/60">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
+        
       </div>
 
       {/* Scroll Indicator */}

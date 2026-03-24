@@ -106,15 +106,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                <span>123 Spiritual Lane, Divine City,<br />Cosmic State 12345</span>
+                <span>19, Ayyasamy Nagar, Thottipalayam Road, Chinniyampalayam post,<br />Coimbatore, Tamil Nadu, 641062, India</span>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Phone className="w-5 h-5 text-amber-400" />
-                <span>+91 98765 43210</span>
+                <span>+91 94898 36247</span>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Mail className="w-5 h-5 text-amber-400" />
-                <span>contact@aynkaranastro.in</span>
+                <span>astrovganesan@gmail.com</span>
               </li>
             </ul>
           </div>

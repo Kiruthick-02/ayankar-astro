@@ -227,19 +227,40 @@ export default function Contact() {
 
         {/* Map Placeholder */}
         <FadeIn>
-          <div className="glass rounded-2xl p-2">
-            <div className="aspect-video rounded-xl bg-gradient-to-br from-purple-900/50 to-slate-900/50 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.1),transparent_50%)]" />
-              </div>
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-amber-400 mx-auto mb-4 animate-bounce" />
-                <p className="text-white/60 text-lg">Interactive Map Integration</p>
-                <p className="text-white/40 text-sm mt-2">123 Spiritual Lane, Divine City</p>
-              </div>
-            </div>
-          </div>
-        </FadeIn>
+  <div className="glass rounded-2xl p-3">
+    <div className="relative rounded-xl overflow-hidden">
+      
+      {/* Map */}
+      <div className="h-[350px] w-full">
+        <iframe
+          src="https://www.google.com/maps?q=11.054387,77.051277&z=10&output=embed"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          className="rounded-xl"
+        ></iframe>
+      </div>
+
+      {/* Glass overlay (subtle) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+
+      {/* Floating Button */}
+      <div className="absolute bottom-4 right-4">
+        <a
+          href="https://www.google.com/maps?ll=11.054387,77.051277&z=7&t=m&hl=en-US&gl=US&mapclient=embed&cid=766927468665478703"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-white/90 backdrop-blur-md text-black px-4 py-2 rounded-lg text-sm font-medium shadow-lg hover:bg-white transition"
+        >
+          <MapPin className="w-4 h-4" />
+          Open in Maps
+        </a>
+      </div>
+
+    </div>
+  </div>
+</FadeIn>
       </div>
     </div>
   )

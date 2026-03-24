@@ -4,7 +4,7 @@ import { Check, Award, Users, BookOpen } from 'lucide-react'
 import FadeIn from '../animations/FadeIn'
 
 const features = [
-  '15+ Years of Experience',
+  '0+ Years of Experience',
   'Certified Vedic Astrologers',
   '100% Confidential Consultations',
   'Personalized Remedies',
@@ -61,7 +61,7 @@ export default function About() {
                 className="absolute -top-6 -right-6 glass rounded-2xl p-4 z-20"
               >
                 <Award className="w-8 h-8 text-amber-400 mb-2" />
-                <div className="text-2xl font-bold text-white">15+</div>
+                <div className="text-2xl font-bold text-white">0+</div>
                 <div className="text-xs text-white/60">Years Exp.</div>
               </motion.div>
 
@@ -71,7 +71,7 @@ export default function About() {
                 className="absolute -bottom-6 -left-6 glass rounded-2xl p-4 z-20"
               >
                 <Users className="w-8 h-8 text-purple-400 mb-2" />
-                <div className="text-2xl font-bold text-white">10K+</div>
+                <div className="text-2xl font-bold text-white">0+</div>
                 <div className="text-xs text-white/60">Happy Clients</div>
               </motion.div>
             </div>

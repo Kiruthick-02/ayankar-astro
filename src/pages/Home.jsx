@@ -49,7 +49,7 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
-      <HoroscopePreview />
+  
       <Testimonials />
       <ContactCTA />
     </motion.div>

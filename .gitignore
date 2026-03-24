@@ -43,5 +43,3 @@ coverage/
 # Misc
 *.tsbuildinfo
 
-# Optional: ignore local config files
-postcss.config.js

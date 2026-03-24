@@ -24,121 +24,268 @@ const allServices = [
   {
     id: 1,
     icon: Sparkles,
-    title: 'Birth Chart Analysis',
-    price: 2999,
-    duration: '45 mins',
+    title: 'Full Horoscope Study',
+    price: 0,
+    duration: '0 mins',
     category: 'Personal',
     popular: true,
-    description: 'Comprehensive analysis of your natal chart including planetary positions, houses, and aspects. Understand your personality, strengths, challenges, and life purpose.',
-    features: ['Natal Chart Reading', 'Planetary Analysis', 'Life Path Insights', 'Remedial Measures', 'Yearly Forecast'],
-    process: ['Share birth details', 'Chart preparation', 'Detailed analysis', 'Remedies provided']
+    description: 'Complete horoscope analysis covering all major life areas and Dasa predictions.',
+    features: [
+      'Love & Marriage',
+      'Education',
+      'Family',
+      'Health',
+      'Career',
+      'Wealth & Asset',
+      'Current Dasa Analysis',
+      'Next Dasa Predictions',
+      'Supporting In Running Dasa' 
+    ],
   },
   {
-    id: 2,
-    icon: Heart,
-    title: 'Marriage Matching',
-    price: 3999,
-    duration: '60 mins',
-    category: 'Relationships',
-    popular: true,
-    description: 'Detailed Kundali matching using Ashtakoota and Dashakoota methods. Analyze compatibility across 36 gunas for a harmonious married life.',
-    features: ['Guna Milan (36 Points)', 'Nadi Dosha Check', 'Manglik Analysis', 'Compatibility Score', 'Remedial Solutions'],
-    process: ['Both charts analyzed', 'Compatibility check', 'Dosha identification', 'Matching report']
-  },
-  {
-    id: 3,
-    icon: Briefcase,
-    title: 'Career & Finance',
-    price: 2499,
-    duration: '45 mins',
-    category: 'Professional',
-    popular: false,
-    description: 'Astrological guidance for professional growth, job changes, promotions, and financial investments. Identify favorable periods for career moves.',
-    features: ['Career Path Analysis', 'Job Change Timing', 'Business Prospects', 'Wealth Indicators', 'Investment Guidance'],
-    process: ['Current analysis', 'Opportunity timing', 'Growth periods', 'Action plan']
-  },
-  {
-    id: 4,
-    icon: Home,
-    title: 'Vastu Shastra',
-    price: 4999,
-    duration: '90 mins',
-    category: 'Space',
-    popular: false,
-    description: 'Complete Vastu analysis for your home or office. Get recommendations for layout, directions, and energy flow optimization.',
-    features: ['Site Analysis', 'Directional Planning', 'Energy Flow Correction', 'Remedial Solutions', 'Floor Plan Review'],
-    process: ['Site/Plan review', 'Energy analysis', 'Problem identification', 'Correction plan']
-  },
-  {
-    id: 5,
-    icon: Calendar,
-    title: 'Muhurat Selection',
-    price: 1999,
-    duration: '30 mins',
-    category: 'Timing',
-    popular: false,
-    description: 'Find the most auspicious dates and times for important events like weddings, business launches, property purchase, and more.',
-    features: ['Wedding Dates', 'Business Launch', 'Property Purchase', 'Travel Timing', 'Event Planning'],
-    process: ['Event details', 'Auspicious calculation', 'Date options', 'Final selection']
-  },
-  {
-    id: 6,
-    icon: Gem,
-    title: 'Gemstone Therapy',
-    price: 1499,
-    duration: '30 mins',
-    category: 'Remedies',
-    popular: false,
-    description: 'Personalized gemstone recommendations based on your birth chart. Learn which stones enhance positive planetary influences.',
-    features: ['Birth Stone Analysis', 'Wearing Instructions', 'Metal Selection', 'Activation Rituals', 'Care Guidelines'],
-    process: ['Chart analysis', 'Stone recommendation', 'Wearing guide', 'Purchase assistance']
-  },
-  {
-    id: 7,
-    icon: Baby,
-    title: 'Child Birth Analysis',
-    price: 2999,
-    duration: '45 mins',
-    category: 'Family',
-    popular: false,
-    description: 'Favorable periods for conception and child birth. Analyze progeny prospects and remedies for delays.',
-    features: ['Fertility Timing', 'Progeny Prospects', 'Remedial Pujas', 'Name Selection', 'Child Chart Preview'],
-    process: ['Couple charts', 'Fertility window', 'Remedies if needed', 'Ongoing support']
-  },
-  {
-    id: 8,
-    icon: Palette,
-    title: 'Color & Number Therapy',
-    price: 999,
-    duration: '20 mins',
-    category: 'Personal',
-    popular: false,
-    description: 'Discover your lucky colors, numbers, and directions based on numerology and astrology for daily life enhancement.',
-    features: ['Lucky Numbers', 'Favorable Colors', 'Direction Analysis', 'Daily Guidance', 'Vehicle Numbers'],
-    process: ['Numerology chart', 'Astrology sync', 'Personal report', 'Daily tips']
-  },
-  {
-    id: 9,
-    icon: Scale,
-    title: 'Legal & Health',
-    price: 2499,
-    duration: '45 mins',
-    category: 'Guidance',
-    popular: false,
-    description: 'Astrological insights regarding legal matters and health concerns. Identify favorable periods and potential challenges.',
-    features: ['Legal Outcome Prediction', 'Health Indicators', 'Recovery Timing', 'Preventive Measures', 'Second Opinion'],
-    process: ['Concern analysis', 'Timing check', 'Outcome probability', 'Guidance provided']
-  }
-]
+  id: 2,
+  icon: Heart,
+  title: 'Marriage & Love',
+  price: 0,
+  duration: '0 mins',
+  category: 'Relationships',
+  popular: true,
+  description: 'Complete guidance for marriage compatibility, timing, and resolving relationship issues.',
 
+  features: {
+    matching: [
+      'Natchatra Matching',
+      'Rasi & Lagna Compatibility',
+      'Dasha & Bhuthi Analysis',
+      'Kalathira Karakas',
+      'Supporting Grahas for Marriage'
+    ],
+    issues: [
+      'Delay in Marriage',
+      'Marriage Timing',
+      'Married Life Issues',
+      'Breakup & Divorce',
+      'Other Relationship Issues'
+    ]
+  },
+
+},
+  {
+  id: 3,
+  icon: Sparkles,
+  title: 'Study & Higher Study',
+  price: 0,
+  duration: '0 mins',
+  category: 'Personal',
+  popular: false,
+  description: 'Complete guidance for education success, higher studies, and choosing the right career path.',
+
+  features: {
+    education: [
+      'Success in Education',
+      'Higher Studies Guidance',
+      'Entrance Exam Success',
+      'Study Abroad Opportunities'
+    ],
+    issues: [
+      'Issues in Studies',
+      'How to Overcome Study Problems'
+    ],
+    fields: [
+      'Medicine',
+      'Pharmacy',
+      'Engineering',
+      'Science',
+      'Arts',
+      'Accounts',
+      'Chartered Accountant',
+      'Travel & Marketing'
+    ]
+  },
+},
+  {
+  id: 4,
+  icon: Baby,
+  title: 'Child Birth',
+  price: 0,
+  duration: '0 mins',
+  category: 'Family',
+  popular: false,
+  description: 'Guidance on childbirth timing, delays, children’s health, and parent-child relationships.',
+
+  features: {
+    timing: [
+      'Why Childbirth Delay',
+      'When We Can Have Child',
+      'Struggles in Childbirth'
+    ],
+    child: [
+      'Children Health',
+      'Parent-Child Relationship'
+    ],
+    twins: [
+      'Horoscope for Twins',
+      'Predictions for Twins'
+    ]
+  },
+
+},
+  {
+  id: 5,
+  icon: Briefcase,
+  title: 'Career – Job / Business',
+  price: 0,
+  duration: '0 mins',
+  category: 'Professional',
+  popular: true,
+  description: 'Complete guidance on career growth, job opportunities, business success, and profession selection.',
+
+  features: {
+    job: [
+      'Career / Job Analysis',
+      'Government Job Possibility',
+      'Promotion in Job',
+      'Issues in Job',
+      'Foreign Job Opportunities'
+    ],
+    business: [
+      'Type of Business',
+      'Trading or Service',
+      'Import & Export',
+      'Profit or Loss in Business',
+      'Partnership Business'
+    ],
+    finance: [
+      'Share Market Success',
+      'Business Growth',
+      'Next Level in Profession'
+    ],
+    professions: [
+      'Engineering',
+      'Doctor',
+      'Builder',
+      'Advocate',
+      'Art',
+      'Finance'
+    ]
+  },
+
+},
+  {
+  id: 6,
+  icon: Scale,
+  title: 'Health & Issues',
+  price: 0,
+  duration: '0 mins',
+  category: 'Guidance',
+  popular: false,
+  description: 'Insights into general health, potential issues, surgery success, mental & physical health, and natural remedies.',
+
+  features: {
+    general: [
+      'General Health',
+      'Potential Health Issues',
+      'Is It Curable',
+      'Free from Hospitalisation'
+    ],
+    treatment: [
+      'Success of Surgery',
+      'Mental Health',
+      'Physical Health'
+    ],
+    remedies: [
+      'Suitable Natural Medicine'
+    ]
+  },
+
+},
+  {
+  id: 7,
+  icon: Home,
+  title: 'Wealth & Asset',
+  price: 0,
+  duration: '0 mins',
+  category: 'Professional',
+  popular: false,
+  description: 'Guidance for buying/selling houses, managing properties, rentals, land, and other wealth-related matters.',
+
+  features: {
+    houses: [
+      'Buying House',
+      'Selling House',
+      'When I Will Have House',
+      'Type of House Possibilities'
+    ],
+    properties: [
+      'Having Business Properties',
+      'Rental House',
+      'Rent from Properties',
+      'Types of Land Properties',
+      'Issues in Properties'
+    ]
+  },
+
+},
+  {
+  id: 8,
+  icon: Sparkles,
+  title: 'Prasanna / Horary Predictions',
+  price: 0,
+  duration: '0 mins',
+  category: 'Guidance',
+  popular: false,
+  description: 'Quick, accurate predictions for one question without a full horoscope. Sub-questions are included.',
+
+  features: {
+    predictions: [
+      'Best Prediction Method Without Horoscope',
+      'Only One Question For Any Doubts',
+      'Sub Questions Related To Main Question',
+      'Answers From Universe',
+      'If Your Question Is True – You Will Get Correct Answers'
+    ]
+  },
+
+},
+  {
+  id: 9,
+  icon: IndianRupee,
+  title: 'Income & Loan',
+  price: 0,
+  duration: '0 mins',
+  category: 'Professional',
+  popular: false,
+  description: 'Insights on sources of income, income growth, loans, repayment issues, and financial stability.',
+
+  features: {
+    income: [
+      'Types of Income',
+      'Income Growth',
+      'Getting Loan',
+      'Possibility of Loan Closure'
+    ],
+    issues: [
+      'Issues in Income',
+      'Issues in Loan Repayment'
+    ]
+  },
+}
+]
 const categories = ['All', 'Personal', 'Relationships', 'Professional', 'Space', 'Timing', 'Remedies', 'Family', 'Guidance']
 
 export default function Services() {
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [expandedService, setExpandedService] = useState(null)
+  const [activeService, setActiveService] = useState(null)
 
-  const filteredServices = selectedCategory === 'All' 
-    ? allServices 
+  const flattenFeatures = (features) =>
+    Array.isArray(features) ? features : Object.values(features).flat()
+
+  const openServiceDetails = (service) => setActiveService(service)
+  const closeServiceDetails = () => setActiveService(null)
+
+  // Filter services by category or show all
+  const filteredServices = selectedCategory === 'All'
+    ? allServices
     : allServices.filter(s => s.category === selectedCategory)
 
   const formatPrice = (price) => {
@@ -165,15 +312,18 @@ export default function Services() {
           </p>
         </FadeIn>
 
-        {/* Category Filter */}
+        {/* Category Tabs */}
         <FadeIn delay={0.2} className="mb-12">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
+            {categories.map(category => (
               <motion.button
                 key={category}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => {
+                  setSelectedCategory(category)
+                  closeServiceDetails() // close details modal on tab change
+                }}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === category
                     ? 'bg-amber-400 text-slate-900'
@@ -187,136 +337,94 @@ export default function Services() {
         </FadeIn>
 
         {/* Services Grid */}
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredServices.map((service) => (
-              <motion.div
-                key={service.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map(service => (
+            <div
+              key={service.id}
+              className={`glass rounded-2xl p-8 flex flex-col relative ${
+                service.popular ? 'ring-2 ring-amber-400/50' : ''
+              }`}
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 px-3 py-1 bg-amber-400 text-slate-900 text-xs font-bold rounded-full">
+                  POPULAR
+                </div>
+              )}
+
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6">
+                <service.icon className="w-7 h-7 text-white" />
+              </div>
+
+              {/* Title and Price */}
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-cinzel font-bold text-white">
+                  {service.title}
+                </h3>
+                <div className="text-right">
+                  <div className="text-amber-400 font-bold text-lg flex items-center gap-1">
+                    <IndianRupee className="w-4 h-4" />
+                    {formatPrice(service.price || 0)}
+                  </div>
+                  <div className="text-white/50 text-xs flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    {service.duration || '0 mins'}
+                  </div>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
+                {service.description}
+              </p>
+
+              {/* Features preview */}
+              <div className="space-y-2 mb-6">
+                {flattenFeatures(service.features).slice(0, 3).map((feature, idx) => (
+                  <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
+                    <Check className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </div>
+                ))}
+                {flattenFeatures(service.features).length > 3 && (
+                  <div
+                    className="text-amber-400/70 text-xs pl-6 cursor-pointer select-none"
+                    onClick={() => openServiceDetails(service)}
+                  >
+                    +{flattenFeatures(service.features).length - 3} more features
+                  </div>
+                )}
+              </div>
+
+              {/* Details button */}
+              <button
+              
+                onClick={() => openServiceDetails(service)}
+                className="flex items-center gap-1 justify-center py-3 rounded-lg glass text-white/70 text-sm font-medium hover:bg-white/10 transition-colors"
               >
-                <motion.div
-                  whileHover={{ y: -10 }}
-                  className={`glass rounded-2xl p-8 h-full flex flex-col hover-glow group relative overflow-hidden ${
-                    service.popular ? 'ring-2 ring-amber-400/50' : ''
-                  }`}
+                Details
+                <ChevronDown className="w-4 h-4" />
+              </button>
+
+              {/* Book Now Button */}
+              <Link to={`/book?service=${service.id}`} className="mt-6">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full btn-primary flex items-center justify-center gap-2 text-sm"
                 >
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className="absolute top-4 right-4 px-3 py-1 bg-amber-400 text-slate-900 text-xs font-bold rounded-full">
-                      POPULAR
-                    </div>
-                  )}
-
-                  {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-7 h-7 text-white" />
-                  </div>
-
-                  {/* Title & Price */}
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-cinzel font-bold text-white group-hover:text-amber-300 transition-colors">
-                      {service.title}
-                    </h3>
-                    <div className="text-right">
-                      <div className="text-amber-400 font-bold text-lg flex items-center gap-1">
-                        <IndianRupee className="w-4 h-4" />
-                        {service.price.toLocaleString()}
-                      </div>
-                      <div className="text-white/50 text-xs flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        {service.duration}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
-                    {service.description}
-                  </p>
-
-                  {/* Features Preview */}
-                  <div className="space-y-2 mb-6">
-                    {service.features.slice(0, 3).map((feature, fidx) => (
-                      <div key={fidx} className="flex items-center gap-2 text-sm text-white/70">
-                        <Check className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 3 && (
-                      <div className="text-amber-400/70 text-xs pl-6">
-                        +{service.features.length - 3} more features
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Expandable Details */}
-                  <AnimatePresence>
-                    {expandedService === service.id && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden mb-6"
-                      >
-                        <div className="pt-4 border-t border-white/10">
-                          <h4 className="text-amber-400 text-sm font-semibold mb-3">Process</h4>
-                          <div className="flex gap-2 overflow-x-auto pb-2">
-                            {service.process.map((step, idx) => (
-                              <div key={idx} className="flex-shrink-0 glass rounded-lg px-3 py-2 text-xs text-white/70">
-                                <span className="text-amber-400 mr-2">{idx + 1}.</span>
-                                {step}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  {/* Actions */}
-                  <div className="flex gap-3">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => setExpandedService(
-                        expandedService === service.id ? null : service.id
-                      )}
-                      className="flex-1 py-3 rounded-lg glass text-white/70 text-sm font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-1"
-                    >
-                      Details
-                      <ChevronDown className={`w-4 h-4 transition-transform ${
-                        expandedService === service.id ? 'rotate-180' : ''
-                      }`} />
-                    </motion.button>
-                    
-                    <Link to={`/book?service=${service.id}`} className="flex-[2]">
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full btn-primary flex items-center justify-center gap-2 text-sm"
-                      >
-                        Book Now
-                        <ArrowRight className="w-4 h-4" />
-                      </motion.button>
-                    </Link>
-                  </div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                  Book Now
+                  <ChevronDown className="w-4 h-4 rotate-90" />
+                </motion.button>
+              </Link>
+            </div>
+          ))}
+        </div>
 
         {/* Empty State */}
         {filteredServices.length === 0 && (
           <FadeIn className="text-center py-20">
-            <Sparkles className="w-16 h-16 text-white/20 mx-auto mb-4" />
             <p className="text-white/50 text-lg">No services found in this category</p>
             <button 
               onClick={() => setSelectedCategory('All')}
@@ -327,27 +435,86 @@ export default function Services() {
           </FadeIn>
         )}
 
-        {/* Bottom CTA */}
-        <FadeIn delay={0.4} className="mt-16 text-center">
-          <div className="glass rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl font-cinzel font-bold text-white mb-4">
-              Need a Custom Package?
-            </h3>
-            <p className="text-white/60 mb-6 max-w-xl mx-auto">
-              We offer personalized consultation packages tailored to your specific needs. 
-              Contact us for a custom solution.
-            </p>
-            <Link to="/contact">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
+        {/* Details Modal */}
+<AnimatePresence>
+  {activeService && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4"
+    >
+      <motion.div
+        initial={{ scale: 0.9, y: 40, opacity: 0 }}
+        animate={{ scale: 1, y: 0, opacity: 1 }}
+        exit={{ scale: 0.9, y: 40, opacity: 0 }}
+        transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+        className="relative w-full max-w-3xl rounded-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-amber-400/20 shadow-2xl shadow-amber-500/10 p-6 md:p-8 text-white"
+      >
+        {/* Glow Effect */}
+        <div className="absolute inset-0 rounded-2xl bg-amber-400/5 blur-2xl pointer-events-none" />
+
+        {/* Close Button */}
+        <button
+          onClick={closeServiceDetails}
+          className="absolute right-4 top-4 text-white/60 hover:text-white transition"
+          aria-label="Close details"
+        >
+          ✕
+        </button>
+
+        {/* Header */}
+        <div className="mb-4">
+          <h3 className="text-2xl md:text-3xl font-cinzel font-bold text-white mb-2">
+            {activeService.title}
+          </h3>
+          <p className="text-white/60 text-sm md:text-base leading-relaxed">
+            {activeService.description}
+          </p>
+        </div>
+
+        {/* Divider */}
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-amber-400/40 to-transparent my-4" />
+
+        {/* Features */}
+        <div className="mb-6">
+          <h4 className="text-amber-400 text-sm font-semibold tracking-wide uppercase mb-3">
+            Features Included
+          </h4>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-64 overflow-y-auto pr-2 custom-scrollbar">
+            {flattenFeatures(activeService.features).map((feature, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 text-sm text-white/80 bg-white/5 hover:bg-white/10 transition rounded-lg px-3 py-2"
               >
-                Contact for Custom Quote
-              </motion.button>
-            </Link>
+                <Check className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                <span>{feature}</span>
+              </div>
+            ))}
           </div>
-        </FadeIn>
+        </div>
+
+        {/* Footer */}
+        <div className="flex flex-col sm:flex-row justify-end gap-3">
+          <button
+            onClick={closeServiceDetails}
+            className="px-5 py-2 rounded-lg border border-white/20 text-white/70 hover:bg-white/10 transition text-sm"
+          >
+            Close
+          </button>
+
+          <Link to={`/book?service=${activeService.id}`}>
+            <button className="px-6 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 font-semibold text-sm shadow-lg shadow-amber-500/30 hover:scale-105 transition">
+              Book Now
+            </button>
+          </Link>
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
       </div>
     </div>
   )

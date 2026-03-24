@@ -5,7 +5,6 @@ import Layout from '../components/layout/Layout'
 import Home from '../pages/Home'
 import About from '../pages/About'
 import Services from '../pages/Services'
-import Horoscope from '../pages/Horoscope'
 import BookConsultation from '../pages/BookConsultation'
 import Contact from '../pages/Contact'
 import NotFound from '../pages/NotFound'
@@ -58,7 +57,7 @@ export default function AppRouter() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="services" element={<Services />} />
-            <Route path="horoscope" element={<Horoscope />} />
+            
             <Route path="book" element={<BookConsultation />} />
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
