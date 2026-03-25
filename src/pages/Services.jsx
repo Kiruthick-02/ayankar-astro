@@ -271,8 +271,10 @@ const allServices = [
   },
 }
 ]
-const categories = ['All', 'Personal', 'Relationships', 'Professional', 'Space', 'Timing', 'Remedies', 'Family', 'Guidance']
-
+const categories = [
+  'All',
+  ...Array.from(new Set(allServices.map(service => service.category)))
+]
 export default function Services() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [activeService, setActiveService] = useState(null)
@@ -363,15 +365,17 @@ export default function Services() {
                   {service.title}
                 </h3>
                 <div className="text-right">
-                  <div className="text-amber-400 font-bold text-lg flex items-center gap-1">
-                    <IndianRupee className="w-4 h-4" />
-                    {formatPrice(service.price || 0)}
-                  </div>
-                  <div className="text-white/50 text-xs flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    {service.duration || '0 mins'}
-                  </div>
-                </div>
+  {/* Price */}
+  <div className="text-amber-400 font-bold text-lg">
+    {formatPrice(service.price || 0)}
+  </div>
+
+  {/* Duration */}
+  <div className="text-white/50 text-xs flex items-center justify-end gap-1">
+    <Clock className="w-3 h-3" />
+    {service.duration || '0 mins'}
+  </div>
+</div>
               </div>
 
               {/* Description */}

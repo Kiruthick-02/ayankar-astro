@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+
+import { servicesData } from '../data/services'
 import { 
   Calendar, 
   Clock, 
@@ -15,13 +17,15 @@ import FadeIn from '../components/animations/FadeIn'
 
 const steps = ['Service', 'Date & Time', 'Details', 'Confirm']
 
-const services = [
-  { id: 1, name: 'Birth Chart Analysis', price: '₹2,999', duration: '45 mins' },
-  { id: 2, name: 'Marriage Matching', price: '₹3,999', duration: '60 mins' },
-  { id: 3, name: 'Career Guidance', price: '₹2,499', duration: '45 mins' },
-  { id: 4, name: 'Vastu Consultation', price: '₹4,999', duration: '90 mins' },
-  { id: 5, name: 'Gemstone Therapy', price: '₹1,499', duration: '30 mins' },
-]
+const formatPrice = (price) => {
+  if (!price) return 'Free'
+
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0
+  }).format(price)
+}
 
 const timeSlots = [
   '09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
@@ -56,7 +60,7 @@ export default function BookConsultation() {
       case 0:
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {services.map((service) => (
+            {servicesData.map((service) => (
               <motion.button
                 key={service.id}
                 whileHover={{ scale: 1.02 }}
@@ -70,7 +74,9 @@ export default function BookConsultation() {
               >
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-cinzel font-bold text-white">{service.name}</h3>
-                  <span className="text-amber-400 font-bold">{service.price}</span>
+                  <span className="text-amber-400 font-bold">
+  {formatPrice(service.price)}
+</span>
                 </div>
                 <p className="text-white/50 text-sm">{service.duration}</p>
               </motion.button>
@@ -237,7 +243,7 @@ export default function BookConsultation() {
               
               <div className="flex justify-between items-center py-3 text-lg">
                 <span className="text-amber-400 font-semibold">Total Amount</span>
-                <span className="text-amber-400 font-bold text-xl">{formData.service?.price}</span>
+                <span className="text-amber-400 font-bold text-xl">{formatPrice(formData.service?.price)}</span>
               </div>
             </div>
 

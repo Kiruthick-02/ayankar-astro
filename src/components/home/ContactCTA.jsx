@@ -79,8 +79,8 @@ export default function ContactCTA() {
               {/* Contact Info Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8 border-t border-white/10">
                 {[
-                  { icon: Phone, label: '+91 98765 43210', sublabel: 'Call Us Anytime' },
-                  { icon: Mail, label: 'contact@aynkaran.in', sublabel: 'Email Us' },
+                  { icon: Phone, label: '+91 94898 36247', sublabel: 'Call Us Anytime' },
+                  { icon: Mail, label: 'astrovganesan@gmail.com', sublabel: 'Email Us' },
                   { icon: Clock, label: '24/7 Available', sublabel: 'Round the Clock' },
                 ].map((item, idx) => (
                   <motion.div
@@ -105,7 +105,7 @@ export default function ContactCTA() {
                 className="inline-flex items-center gap-2 mt-8 px-4 py-2 rounded-full glass text-sm text-white/60"
               >
                 <MapPin className="w-4 h-4 text-amber-400" />
-                <span>123 Spiritual Lane, Divine City, India</span>
+                <span>19, Ayyasamy Nagar, Thottipalayam Road, Chinniyampalayam post,Coimbatore, Tamil Nadu, 641062, India</span>
               </motion.div>
             </div>
           </div>

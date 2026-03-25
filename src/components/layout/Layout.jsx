@@ -24,15 +24,9 @@ export default function Layout() {
       <StarBackground />
       <Navbar />
       
-      <motion.main
-        variants={pageVariants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        className="relative z-10"
-      >
-        <Outlet />
-      </motion.main>
+      <main>
+  <Outlet />
+</main>
       
       <Footer />
     </div>

@@ -7,47 +7,37 @@ import {
   Home, 
   Calendar, 
   Gem,
+  Baby,
   ArrowRight
 } from 'lucide-react'
 import FadeIn from '../animations/FadeIn'
 import StaggerContainer, { StaggerItem } from '../animations/StaggerContainer'
 
+
 const services = [
   {
     icon: Sparkles,
-    title: 'Birth Chart Analysis',
-    description: 'Comprehensive analysis of your natal chart revealing personality traits, strengths, and life path.',
+    title: 'Full Horoscope Study',
+    description: 'Complete horoscope analysis covering all major life areas including career, marriage, health, and Dasa predictions.',
     color: 'from-purple-500 to-indigo-600'
   },
   {
     icon: Heart,
-    title: 'Marriage Matching',
-    description: 'Kundali matching for compatibility analysis ensuring harmonious marital relationships.',
+    title: 'Marriage & Love',
+    description: 'Guidance for compatibility, marriage timing, and resolving relationship issues.',
     color: 'from-pink-500 to-rose-600'
   },
   {
-    icon: Briefcase,
-    title: 'Career Guidance',
-    description: 'Astrological insights for professional growth, job changes, and business success.',
-    color: 'from-amber-500 to-orange-600'
-  },
-  {
-    icon: Home,
-    title: 'Vastu Consultation',
-    description: 'Ancient Vastu Shastra principles for positive energy flow in your living spaces.',
-    color: 'from-emerald-500 to-teal-600'
-  },
-  {
-    icon: Calendar,
-    title: 'Muhurat Selection',
-    description: 'Auspicious timing for important events, ceremonies, and new beginnings.',
+    icon: Sparkles,
+    title: 'Study & Higher Study',
+    description: 'Astrological guidance for education success, higher studies, and choosing the right career path.',
     color: 'from-blue-500 to-cyan-600'
   },
   {
-    icon: Gem,
-    title: 'Gemstone Therapy',
-    description: 'Personalized gemstone recommendations to enhance planetary influences.',
-    color: 'from-violet-500 to-purple-600'
+    icon: Baby,
+    title: 'Child Birth',
+    description: 'Insights into childbirth timing, delays, and children-related matters.',
+    color: 'from-emerald-500 to-teal-600'
   }
 ]
 
@@ -69,44 +59,44 @@ export default function Services() {
         </FadeIn>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, idx) => (
-            <StaggerItem key={idx}>
-              <motion.div
-                whileHover={{ y: -10, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="group relative glass rounded-2xl p-8 overflow-hidden hover-glow"
-              >
-                {/* Gradient Background on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                
-                {/* Icon */}
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-7 h-7 text-white" />
-                </div>
+  {services.map((service, idx) => (
+    <StaggerItem key={idx}>
+      <motion.div
+        whileHover={{ y: -10, scale: 1.02 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Link
+          to="/services"
+          className="group relative glass rounded-2xl p-8 overflow-hidden hover-glow block"
+        >
+          {/* Background gradient */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
-                {/* Content */}
-                <h3 className="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-6">
-                  {service.description}
-                </p>
+          {/* Icon */}
+          <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+            <service.icon className="w-7 h-7 text-white" />
+          </div>
 
-                {/* Link */}
-                <Link 
-                  to="/services"
-                  className="inline-flex items-center gap-2 text-amber-400 text-sm font-semibold group/link"
-                >
-                  Learn More 
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
+          {/* Title & Description */}
+          <h3 className="text-xl font-cinzel font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">
+            {service.title}
+          </h3>
+          <p className="text-white/60 text-sm leading-relaxed mb-6">
+            {service.description}
+          </p>
 
-                {/* Decorative Corner */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-amber-400/10 to-transparent rounded-bl-full" />
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+          {/* Learn More text */}
+          <span className="inline-flex items-center gap-2 text-amber-400 text-sm font-semibold group-hover:text-amber-300 transition-colors">
+            Learn More <ArrowRight className="w-4 h-4" />
+          </span>
+
+          {/* Decorative Corner */}
+          <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-amber-400/10 to-transparent rounded-bl-full" />
+        </Link>
+      </motion.div>
+    </StaggerItem>
+  ))}
+</StaggerContainer>
 
         <FadeIn delay={0.4} className="text-center mt-12">
           <Link to="/services">

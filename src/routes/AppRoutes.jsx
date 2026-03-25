@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect } from 'react'
 import Layout from '../components/layout/Layout'
 import Home from '../pages/Home'
@@ -53,16 +53,15 @@ export default function AppRouter() {
       <ScrollToTop />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="services" element={<Services />} />
-            
-            <Route path="book" element={<BookConsultation />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
+  <Route path="/" element={<Layout />}>
+    <Route index element={<PageTransition><Home /></PageTransition>} />
+    <Route path="about" element={<PageTransition><About /></PageTransition>} />
+    <Route path="services" element={<PageTransition><Services /></PageTransition>} />
+    <Route path="book" element={<PageTransition><BookConsultation /></PageTransition>} />
+    <Route path="contact" element={<PageTransition><Contact /></PageTransition>} />
+    <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+  </Route>
+</Routes>
       </AnimatePresence>
     </>
   )

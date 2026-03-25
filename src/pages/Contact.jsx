@@ -19,25 +19,25 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    details: ['+91 98765 43210', '+91 98765 43211'],
+    details: ['+91 94898 36247'],
     color: 'from-green-500 to-emerald-600'
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['contact@aynkaranastro.in', 'support@aynkaranastro.in'],
+    details: ['astrovganesan@gmail.com'],
     color: 'from-blue-500 to-cyan-600'
   },
   {
     icon: MapPin,
     title: 'Visit Us',
-    details: ['123 Spiritual Lane, Divine City', 'Cosmic State 12345, India'],
+    details: ['19, Ayyasamy Nagar, Thottipalayam Road, Chinniyampalayam post, Coimbatore, Tamil Nadu, 641062, India'],
     color: 'from-red-500 to-pink-600'
   },
   {
     icon: Clock,
     title: 'Working Hours',
-    details: ['Mon - Sat: 9:00 AM - 8:00 PM', 'Sunday: 10:00 AM - 4:00 PM'],
+    details: ['###'],
     color: 'from-amber-500 to-orange-600'
   }
 ]
@@ -143,7 +143,7 @@ export default function Contact() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        placeholder="John Doe"
+                        placeholder="Name"
                         className="w-full glass rounded-xl pl-12 pr-4 py-3 text-white bg-transparent border border-white/10 focus:border-amber-400 focus:outline-none placeholder-white/30"
                       />
                     </div>
@@ -158,7 +158,7 @@ export default function Contact() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        placeholder="john@example.com"
+                        placeholder="@gmail.com"
                         className="w-full glass rounded-xl pl-12 pr-4 py-3 text-white bg-transparent border border-white/10 focus:border-amber-400 focus:outline-none placeholder-white/30"
                       />
                     </div>
@@ -174,7 +174,7 @@ export default function Contact() {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 "
                         className="w-full glass rounded-xl pl-12 pr-4 py-3 text-white bg-transparent border border-white/10 focus:border-amber-400 focus:outline-none placeholder-white/30"
                       />
                     </div>

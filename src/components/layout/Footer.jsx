@@ -21,7 +21,6 @@ const footerLinks = {
   company: [
     { label: 'About Us', path: '/about' },
     { label: 'Our Astrologers', path: '/about' },
-    { label: 'Testimonials', path: '/about' },
     { label: 'Blog', path: '/about' },
   ],
   legal: [
