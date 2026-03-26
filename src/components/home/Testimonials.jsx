@@ -5,7 +5,8 @@ import {
   Star, 
   ChevronLeft, 
   ChevronRight,
-  User
+  User,
+  MapPin 
 } from 'lucide-react'
 import FadeIn from '../animations/FadeIn'
 
@@ -139,7 +140,7 @@ export default function Testimonials() {
 
         <div className="relative max-w-4xl mx-auto">
           {/* Main Card */}
-          <div className="glass rounded-3xl p-8 md:p-12 min-h-[400px] relative overflow-hidden">
+          <div className="glass rounded-3xl p-8 md:p-12 pb-24 min-h-[400px] relative overflow-hidden">
             <Quote className="absolute top-8 left-8 w-16 h-16 text-amber-400/10" />
             
             <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -183,42 +184,48 @@ export default function Testimonials() {
                 </p>
 
                 {/* Author */}
-                <div className="flex flex-col items-center gap-4">
-                  <motion.div 
-                    whileHover={{ scale: 1.1 }}
-                    className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-purple-600 p-1"
-                  >
-                    <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
-                      {testimonials[current].image ? (
-                        <img 
-                          src={testimonials[current].image} 
-                          alt={testimonials[current].name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <User className="w-10 h-10 text-white/40" />
-                      )}
-                    </div>
-                  </motion.div>
-                  
-                  <div className="text-center">
-                    <div className="font-cinzel font-bold text-white text-xl mb-1">
-                      {testimonials[current].name}
-                    </div>
-                    <div className="text-amber-400 text-sm font-medium mb-1">
-                      {testimonials[current].role}
-                    </div>
-                    <div className="text-white/40 text-xs flex items-center justify-center gap-1">
-                      <span>📍</span>
-                      {testimonials[current].location}
-                    </div>
-                  </div>
-                </div>
+<div className="flex flex-col items-center">
+  {/* Avatar */}
+  <motion.div 
+    whileHover={{ scale: 1.1 }}
+    className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-purple-600 p-1 mb-4"
+  >
+    <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
+      {testimonials[current].image ? (
+        <img 
+          src={testimonials[current].image} 
+          alt={testimonials[current].name}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <User className="w-10 h-10 text-white/40" />
+      )}
+    </div>
+  </motion.div>
+  
+  {/* Text Content */}
+  <div className="flex flex-col items-center text-center leading-tight">
+    <div className="font-cinzel font-bold text-white text-xl">
+      {testimonials[current].name}
+    </div>
+
+    <div className="text-amber-400 text-sm font-medium mt-1">
+      {testimonials[current].role}
+    </div>
+
+    <div className="text-white/40 text-xs flex items-center gap-1 mt-1 leading-none">
+      <MapPin className="w-3 h-3 shrink-0 translate-y-[1px]" />
+      <span className="leading-none">
+        {testimonials[current].location}
+      </span>
+    </div>
+  </div>
+</div>
               </motion.div>
             </AnimatePresence>
 
             {/* Navigation */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4">
+            <div className="flex justify-center items-center gap-4 mt-3">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -288,9 +295,9 @@ export default function Testimonials() {
         </div>
 
         {/* Trust Badges */}
-        <FadeIn delay={0.3} className="mt-16">
+        <FadeIn delay={0.3} className="mt-10">
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
-            {['Trusted by 10,000+', '4.9/5 Rating', '15+ Years', '100% Confidential'].map((badge, idx) => (
+            {['Trusted', '4.9/5 Rating', '20+ Years', '100% Confidential'].map((badge, idx) => (
               <div key={idx} className="flex items-center gap-2 text-white/60 text-sm">
                 <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
                 <span>{badge}</span>

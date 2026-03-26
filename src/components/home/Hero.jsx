@@ -79,7 +79,7 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.5 }}
           >
             <Star className="w-4 h-4 text-amber-400" />
-            <span className="text-sm text-amber-200">Trusted by 10,000+ Clients Worldwide</span>
+            <span className="text-sm text-amber-200">Trusted</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-cinzel font-bold mb-6 leading-tight">

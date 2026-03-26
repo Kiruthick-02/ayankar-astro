@@ -23,7 +23,7 @@ export default function About() {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 360])
 
   return (
-    <section ref={containerRef} className="py-24 relative overflow-hidden">
+    <section ref={containerRef} className="py-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}

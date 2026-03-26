@@ -28,7 +28,7 @@ const allServices = [
     price: 0,
     duration: '0 mins',
     category: 'Personal',
-    popular: true,
+    popular: false,
     description: 'Complete horoscope analysis covering all major life areas and Dasa predictions.',
     features: [
       'Love & Marriage',
@@ -49,7 +49,7 @@ const allServices = [
   price: 0,
   duration: '0 mins',
   category: 'Relationships',
-  popular: true,
+  popular: false,
   description: 'Complete guidance for marriage compatibility, timing, and resolving relationship issues.',
 
   features: {
@@ -137,7 +137,7 @@ const allServices = [
   price: 0,
   duration: '0 mins',
   category: 'Professional',
-  popular: true,
+  popular: false,
   description: 'Complete guidance on career growth, job opportunities, business success, and profession selection.',
 
   features: {
