@@ -4,7 +4,6 @@ import Hero from '../components/home/Hero'
 import Services from '../components/home/Services'
 import About from '../components/home/About'
 import Testimonials from '../components/home/Testimonials'
-import HoroscopePreview from '../components/home/HoroscopePreview'
 import ContactCTA from '../components/home/ContactCTA'
 import { useSmoothScroll } from '../hooks/useSmoothScroll'
 
@@ -49,7 +48,7 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
-  
+
       <Testimonials />
       <ContactCTA />
     </motion.div>

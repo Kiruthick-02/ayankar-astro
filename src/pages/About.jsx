@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Award, Users, BookOpen, Globe, Star, Heart } from 'lucide-react'
 import FadeIn from '../components/animations/FadeIn'
 import StaggerContainer, { StaggerItem } from '../components/animations/StaggerContainer'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const expert = 
@@ -33,6 +35,8 @@ const values = [
 ]
 
 export default function About() {
+  const navigate = useNavigate()
+
   return (
     <div className="page-transition pt-32 pb-24">
       {/* Hero Section */}
@@ -192,13 +196,16 @@ className="absolute -top-6 -right-6 glass rounded-2xl p-6"
         {expert.description}
       </p>
 
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="btn-primary"
-      >
-        Book Consultation
-      </motion.button>
+
+<Link to="/book">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="btn-primary"
+  >
+    Book Consultation
+  </motion.button>
+</Link>
     </div>
   </motion.div>
 </section>
